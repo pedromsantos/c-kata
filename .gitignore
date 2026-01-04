@@ -1,15 +1,44 @@
+# Build directory
+build/
+build-*/
+cmake-build-*/
+
 # Object files
 *.o
+*.ko
 *.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
 
 # Executables
-test_kata
 *.exe
 *.out
-
-# Compiled static libraries
-*.a
-*.lib
+*.app
+*.i*86
+*.x86_64
+*.hex
+test_kata
+test_*
 
 # Debug files
 *.dSYM/
@@ -17,12 +46,63 @@ test_kata
 *.idb
 *.pdb
 
-# Editor files
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+*.cmake
+
+# CTest
+Testing/
+
+# Editor and IDE files
 .vscode/
 .idea/
 *.swp
+*.swo
 *~
+.*.swp
+.*.swo
+*.bak
+*.orig
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+
+# Coverage files
+*.gcov
+*.gcda
+*.gcno
+coverage/
+*.info
+
+# Valgrind
+*.log
+vgcore.*
+
+# Core dumps
+core
+core.*
