@@ -1,1 +1,0 @@
-/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/test_2-leap_year.dir/src/2-leap_year/kata.c.o" "CMakeFiles/test_2-leap_year.dir/src/2-leap_year/test_kata.c.o" -o test_2-leap_year  _deps/cmocka-build/src/libcmocka-static.a

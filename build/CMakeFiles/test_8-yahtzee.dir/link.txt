@@ -1,1 +1,0 @@
-/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/test_8-yahtzee.dir/src/8-yahtzee/kata.c.o" "CMakeFiles/test_8-yahtzee.dir/src/8-yahtzee/test_kata.c.o" -o test_8-yahtzee  _deps/cmocka-build/src/libcmocka-static.a
