@@ -1,77 +1,97 @@
-#include "kata.h"
-#include <stdlib.h>
 #include <string.h>
+#include "GildedRose.h"
+#include <stdio.h>
 
-Item* item_create(const char* name, int sell_in, int quality) {
-    Item* item = (Item*)malloc(sizeof(Item));
-    if (item) {
-        item->name = strdup(name);
-        item->sell_in = sell_in;
-        item->quality = quality;
-    }
+Item*
+init_item(Item* item, const char *name, int sellIn, int quality)
+{
+    item->sellIn = sellIn;
+    item->quality = quality;
+    item->name = strdup(name);
+
     return item;
 }
 
-void item_destroy(Item* item) {
-    if (item) {
-        free(item->name);
-        free(item);
-    }
+extern char*
+print_item(char* buffer, Item* item)
+{
+    sprintf(buffer, "%s, %d, %d", item->name, item->sellIn, item->quality);
 }
 
-GildedRose* gilded_rose_create(Item* items, int item_count) {
-    GildedRose* rose = (GildedRose*)malloc(sizeof(GildedRose));
-    if (rose) {
-        rose->items = items;
-        rose->item_count = item_count;
-    }
-    return rose;
-}
+void
+update_quality(Item items[], int size)
+{
+    int i;
 
-void gilded_rose_destroy(GildedRose* rose) {
-    if (rose) {
-        free(rose);
-    }
-}
-
-void gilded_rose_update_quality(GildedRose* rose) {
-    if (!rose) return;
-
-    for (int i = 0; i < rose->item_count; i++) {
-        Item* item = &rose->items[i];
-
-        if (strcmp(item->name, "Aged Brie") != 0 &&
-            strcmp(item->name, "Backstage passes to a TAFKAL80ETC concert") != 0) {
-            if (item->quality > 0 && strcmp(item->name, "Sulfuras, Hand of Ragnaros") != 0) {
-                item->quality = item->quality - 1;
-            }
-        } else if (item->quality < 50) {
-            item->quality = item->quality + 1;
-            if (strcmp(item->name, "Backstage passes to a TAFKAL80ETC concert") == 0) {
-                if (item->sell_in < 11 && item->quality < 50) {
-                    item->quality = item->quality + 1;
-                }
-                if (item->sell_in < 6 && item->quality < 50) {
-                    item->quality = item->quality + 1;
+    for (i = 0; i < size; i++)
+    {
+        if (strcmp(items[i].name, "Aged Brie") && strcmp(items[i].name, "Backstage passes to a TAFKAL80ETC concert"))
+        {
+            if (items[i].quality > 0)
+            {
+                if (strcmp(items[i].name, "Sulfuras, Hand of Ragnaros"))
+                {
+                    items[i].quality = items[i].quality - 1;
                 }
             }
         }
+        else
+        {
+            if (items[i].quality < 50)
+            {
+                items[i].quality = items[i].quality + 1;
 
-        if (strcmp(item->name, "Sulfuras, Hand of Ragnaros") != 0) {
-            item->sell_in = item->sell_in - 1;
-        }
-
-        if (item->sell_in < 0) {
-            if (strcmp(item->name, "Aged Brie") != 0) {
-                if (strcmp(item->name, "Backstage passes to a TAFKAL80ETC concert") != 0) {
-                    if (item->quality > 0 && strcmp(item->name, "Sulfuras, Hand of Ragnaros") != 0) {
-                        item->quality = item->quality - 1;
+                if (!strcmp(items[i].name, "Backstage passes to a TAFKAL80ETC concert"))
+                {
+                    if (items[i].sellIn < 11)
+                    {
+                        if (items[i].quality < 50)
+                        {
+                            items[i].quality = items[i].quality + 1;
+                        }
                     }
-                } else {
-                    item->quality = item->quality - item->quality;
+
+                    if (items[i].sellIn < 6)
+                    {
+                        if (items[i].quality < 50)
+                        {
+                            items[i].quality = items[i].quality + 1;
+                        }
+                    }
                 }
-            } else if (item->quality < 50) {
-                item->quality = item->quality + 1;
+            }
+        }
+
+        if (strcmp(items[i].name, "Sulfuras, Hand of Ragnaros"))
+        {
+            items[i].sellIn = items[i].sellIn - 1;
+        }
+
+        if (items[i].sellIn < 0)
+        {
+            if (strcmp(items[i].name, "Aged Brie"))
+            {
+                if (strcmp(items[i].name, "Backstage passes to a TAFKAL80ETC concert"))
+                {
+                    if (items[i].quality > 0)
+                    {
+                        if (strcmp(items[i].name, "Sulfuras, Hand of Ragnaros"))
+                        {
+                            items[i].quality = items[i].quality - 1;
+                        }
+                    }
+                }
+                else
+                {
+                    items[i].quality = items[i].quality - items[i].quality;
+                }
+            }
+            else
+            {
+                if (items[i].quality < 50)
+                {
+                    items[i].quality = items[i].quality + 1;
+                }
             }
         }
     }

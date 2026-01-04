@@ -1,22 +1,15 @@
-#ifndef GILDED_ROSE_H
-#define GILDED_ROSE_H
+#ifndef ROSE_INCLUDED
+#define ROSE_INCLUDED
 
-typedef struct {
-    char* name;
-    int sell_in;
+typedef struct
+{
+    char *name;
+    int sellIn;
     int quality;
 } Item;
 
-typedef struct {
-    Item* items;
-    int item_count;
-} GildedRose;
+extern Item* init_item(Item* item, const char *name, int sellIn, int quality);
+extern void update_quality(Item items[], int size);
+extern char* print_item(char* buffer, Item* item);
 
-Item* item_create(const char* name, int sell_in, int quality);
-void item_destroy(Item* item);
-
-GildedRose* gilded_rose_create(Item* items, int item_count);
-void gilded_rose_destroy(GildedRose* rose);
-void gilded_rose_update_quality(GildedRose* rose);
-
-#endif /* GILDED_ROSE_H */
+#endif
