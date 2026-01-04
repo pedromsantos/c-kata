@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/test_17-social_network.dir/src/17-social_network/kata.c.o" "CMakeFiles/test_17-social_network.dir/src/17-social_network/test_kata.c.o" -o test_17-social_network  _deps/cmocka-build/src/libcmocka-static.a

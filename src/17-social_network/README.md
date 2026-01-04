@@ -1,0 +1,125 @@
+# Social Network
+
+## Source
+
+<https://github.com/sandromancuso/social_networking_kata>
+
+## Goal
+
+- Implement a networking application (similar to Twitter) satisfying the scenarios below.
+- Use a Domain Driven Design and Hexagonal architecture approach.
+- Start from the use cases, we will not be implementing the transport layer for this project.
+- Use an in-memory database implementation.
+
+### Scenarios
+
+#### Posting: Alice can publish messages to a personal timeline
+
+```cmd
+> Alice -> I love the weather today
+```
+
+#### Posting: Bob can publish messages to a personal timeline
+
+```cmd
+> Bob -> Damn! We lost!
+> Bob -> Good game though.
+```
+
+#### Reading: We can view Alice's timeline
+
+```cmd
+> Alice
+> I love the weather today (5 minutes ago)
+```
+
+#### Reading: We can view Bob's timeline
+
+```cmd
+> Bob
+> Good game though. (1 minute ago)
+> Damn! We lost! (2 minutes ago)
+```
+
+#### Following: Charlie can subscribe to Alice's and Bob's timelines, and view an aggregated list of all subscriptions sorted by time of publishing
+
+```cmd
+> Charlie -> I'm in New York today! Anyone want to have a coffee?
+> Charlie follows Alice    # User follows another user
+> Charlie wall            # View aggregated timeline
+> Charlie - I'm in New York today! Anyone want to have a coffee? (2 seconds ago)
+> Alice - I love the weather today (5 minutes ago)
+
+> Charlie follows Bob     # User can follow multiple people
+> Charlie wall           # Updated wall shows all followed users' posts
+> Charlie - I'm in New York today! Anyone want to have a coffee? (15 seconds ago)
+> Bob - Good game though. (1 minute ago)
+> Bob - Damn! We lost! (2 minutes ago)
+> Alice - I love the weather today (5 minutes ago)
+```
+
+## Details
+
+Users submit commands to the application.
+There are four commands:
+
+- posting: `[user name] -> [message]`
+- reading: `[user name]`
+- following: `[user name] follows [another user]`
+- wall: `[user name] wall`
+
+'posting', 'reading', 'following' and 'wall' are not part of the commands; commands always start with the user's name.
+
+- Don't worry about handling any exceptions or invalid commands.
+  - Assume that the user will always type the correct commands.
+  - Just focus on the sunny day scenarios.
+- Don't bother making it work over a network or across processes.
+- It can all be done in memory, assuming that users will all use the same terminal.
+- Non-existing users should be created as they post their first message.
+- Application should not start with a pre-defined list of users.
+
+IMPORTANT: Focus on writing the best code you can produce.
+Do not rush.
+Take as much time as you need; there is no deadline.
+
+## Implementation Example
+
+```c
+#include "kata.h"
+
+int main(void) {
+    UseCase* use_case = use_case_create();
+
+    // Posting
+    use_case_execute(use_case, "Alice -> I love the weather today");
+    use_case_execute(use_case, "Bob -> Damn! We lost!");
+
+    // Reading
+    const char* alice_timeline = use_case_query(use_case, "Alice");
+    printf("%s\n", alice_timeline);
+
+    // Following
+    use_case_execute(use_case, "Charlie -> I'm in New York today!");
+    use_case_execute(use_case, "Charlie follows Alice");
+
+    // Wall
+    const char* charlie_wall = use_case_query(use_case, "Charlie wall");
+    printf("%s\n", charlie_wall);
+
+    use_case_destroy(use_case);
+    return 0;
+}
+```
+
+## Unit vs Integration vs Acceptance vs E2E Testing
+
+|                       | **Unit**                    | **Integration aka contract**                            | **Acceptance aka system**                            | **E2e aka functional**                                      |
+| --------------------- | --------------------------- | ------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------- |
+| **Boundary**          | Function, Module            | Module - External dependency                            | Application code (mock/stub) external dependencies   | Application and network dependencies services and databases |
+| **Size**              | Tiny                        | Tiny to Small                                           | Small to Medium                                      | Large                                                       |
+| **Environment**       | Development                 | Integration test env                                    | Development/QA                                       | Prod like                                                   |
+| **Data**              | Mock data                   | Test data                                               | Fake or Data                                         | Copy of real data or real data                              |
+| **System Under Test** | Isolated behaviour          | Integration layer and external dependency               | App flow with (mocked/stubbed) external dependencies | App and all dependencies                                    |
+| **Scenarios**         | Developer                   | Developer                                               | Developer/QA                                         | End user                                                    |
+| **When**              | Before each commit/on build | On build                                                | Before each commit/on build                          | On build                                                    |
+| **Execution time**    | Very fast                   | Medium to slow (depending on external dependency speed) | Very fast to fast, on worst case medium              | Slow                                                        |

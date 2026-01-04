@@ -1,0 +1,105 @@
+# Tic Tac Toe kata
+
+## Rules
+
+- The game is played on a grid that's 3 squares by 3 squares
+- Players alternate placing X's and O's in empty squares
+- X always plays first
+- Players cannot play on a played square
+- A Player wins when it has three squares in a row
+  - Horizontally
+  - Vertically
+  - Diagonally
+- If all nine squares are filled and neither player has won, the game is a draw
+
+## Follow TDD rules strictly
+
+1. ✅ Write production code only to pass a failing unit test
+2. ✅ Write only enough of a unit test to make it fail
+3. ✅ Write only enough production code to make the failing test pass
+
+## First run
+
+Implement Tic Tac Toe as best as you can using TDD.
+
+## Second run
+
+Implement Tic Tac Toe strictly applying object calisthenics rules (adapted for C).
+
+## Object calisthenics (Adapted for C)
+
+### In order of importance (defined by Pedro)
+
+- Wrap all primitives and strings
+  - Wrap primitives in a struct, especially if it has behavior or it's an important domain concept
+- First class collections
+  - Wrap arrays in a struct, especially if it has behavior or it's an important domain concept
+- One dot per line (function call chain)
+  - Do not write `dog->body->tail->wag()` write `dog_express_happiness(dog)` - Law of Demeter
+- No direct access to struct fields from outside - use functions! - TELL DON'T ASK!
+- No structs with more than two fields
+- Only one level of indentation per function
+- Don't use the ELSE keyword
+- Don't abbreviate names
+- Keep all entities small
+  - 10 files per module
+  - 50 lines per file
+  - 5 lines per function
+  - 2-3 arguments per function
+
+### Example: Wrapping Primitives
+
+```c
+// Before
+typedef struct {
+    int x;
+    int y;
+} Game;
+
+// After
+typedef struct {
+    int value;
+} XCoordinate;
+
+typedef struct {
+    int value;
+} YCoordinate;
+
+typedef struct {
+    XCoordinate x;
+    YCoordinate y;
+} Position;
+```
+
+## Great habits
+
+### Considerations when writing a new test
+
+- Tests should test one thing only.
+- Create more specific tests to drive a more generic solution (triangulate).
+- Give your tests meaningful names (behavior/goal-oriented) that reflect your business domain.
+- See the test fail for the right reason.
+- Ensure you have meaningful feedback from failing tests.
+- Keep your tests and production code separate.
+- Organize your unit tests to reflect your production code (similar project structure).
+- Organize your test in arrange, act and assert blocks.
+- Write the, or at least focus on the, assertion first and work backward.
+- Write fast, isolated, repeatable and self-validating tests.
+
+### Considerations when making a failing test pass
+
+- Write the simplest code to pass the test.
+- Write any code that makes you get to the refactor phase quicker.
+- Use Transformation Priority Premise.
+- Consider using object calisthenics to drive design decisions.
+
+### Considerations after the test passes
+
+- Use the Rule of Three to tackle duplication.
+- Refactor design constantly.
+- Apply object calisthenics to improve your design.
+
+## Resources
+
+<https://levelup.gitconnected.com/learn-these-9-rules-to-start-writing-clean-code-immediately-a7ee40fe1e1b>
+<https://williamdurand.fr/2013/06/03/object-calisthenics/>

@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/test_3-fibonacci.dir/src/3-fibonacci/kata.c.o" "CMakeFiles/test_3-fibonacci.dir/src/3-fibonacci/test_kata.c.o" -o test_3-fibonacci  _deps/cmocka-build/src/libcmocka-static.a

@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/test_4-stack_kata.dir/src/4-stack_kata/kata.c.o" "CMakeFiles/test_4-stack_kata.dir/src/4-stack_kata/test_kata.c.o" -o test_4-stack_kata  _deps/cmocka-build/src/libcmocka-static.a

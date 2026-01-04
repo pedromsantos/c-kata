@@ -1,0 +1,433 @@
+Start testing: Jan 04 14:17 CET
+----------------------------------------------------------
+1/17 Testing: 1-fizz_buzz
+1/17 Test: 1-fizz_buzz
+Command: "/Users/pedro/src/c-kata/build/test_1-fizz_buzz"
+Directory: /Users/pedro/src/c-kata/build
+"1-fizz_buzz" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_fizz_buzz
+[       OK ] test_fizz_buzz
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"1-fizz_buzz" end time: Jan 04 14:17 CET
+"1-fizz_buzz" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/17 Testing: 2-leap_year
+2/17 Test: 2-leap_year
+Command: "/Users/pedro/src/c-kata/build/test_2-leap_year"
+Directory: /Users/pedro/src/c-kata/build
+"2-leap_year" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_leap_year
+[       OK ] test_leap_year
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"2-leap_year" end time: Jan 04 14:17 CET
+"2-leap_year" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/17 Testing: 3-fibonacci
+3/17 Test: 3-fibonacci
+Command: "/Users/pedro/src/c-kata/build/test_3-fibonacci"
+Directory: /Users/pedro/src/c-kata/build
+"3-fibonacci" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_fibonacci_starts_at_zero
+[       OK ] test_fibonacci_starts_at_zero
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"3-fibonacci" end time: Jan 04 14:17 CET
+"3-fibonacci" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/17 Testing: 4-stack_kata
+4/17 Test: 4-stack_kata
+Command: "/Users/pedro/src/c-kata/build/test_4-stack_kata"
+Directory: /Users/pedro/src/c-kata/build
+"4-stack_kata" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_stack_should_be_zero
+[       OK ] test_stack_should_be_zero
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"4-stack_kata" end time: Jan 04 14:17 CET
+"4-stack_kata" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/17 Testing: 5-roman_numerals
+5/17 Test: 5-roman_numerals
+Command: "/Users/pedro/src/c-kata/build/test_5-roman_numerals"
+Directory: /Users/pedro/src/c-kata/build
+"5-roman_numerals" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_roman_numeral_should
+[       OK ] test_roman_numeral_should
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"5-roman_numerals" end time: Jan 04 14:17 CET
+"5-roman_numerals" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/17 Testing: 6-prime_factors
+6/17 Test: 6-prime_factors
+Command: "/Users/pedro/src/c-kata/build/test_6-prime_factors"
+Directory: /Users/pedro/src/c-kata/build
+"6-prime_factors" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_determine_prime_factor_1
+[       OK ] test_determine_prime_factor_1
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"6-prime_factors" end time: Jan 04 14:17 CET
+"6-prime_factors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/17 Testing: 7-tic_tac_toe
+7/17 Test: 7-tic_tac_toe
+Command: "/Users/pedro/src/c-kata/build/test_7-tic_tac_toe"
+Directory: /Users/pedro/src/c-kata/build
+"7-tic_tac_toe" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_tic_tac_toe_should_have_a_winner
+[       OK ] test_tic_tac_toe_should_have_a_winner
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"7-tic_tac_toe" end time: Jan 04 14:17 CET
+"7-tic_tac_toe" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/17 Testing: 8-yahtzee
+8/17 Test: 8-yahtzee
+Command: "/Users/pedro/src/c-kata/build/test_8-yahtzee"
+Directory: /Users/pedro/src/c-kata/build
+"8-yahtzee" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_yahtzee_initial_score
+[       OK ] test_yahtzee_initial_score
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"8-yahtzee" end time: Jan 04 14:17 CET
+"8-yahtzee" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/17 Testing: 9-mars_rover
+9/17 Test: 9-mars_rover
+Command: "/Users/pedro/src/c-kata/build/test_9-mars_rover"
+Directory: /Users/pedro/src/c-kata/build
+"9-mars_rover" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 2 test(s).
+[ RUN      ] test_turn_360_degrees_clockwise
+[       OK ] test_turn_360_degrees_clockwise
+[ RUN      ] test_turn_360_degrees_counter_clockwise
+[       OK ] test_turn_360_degrees_counter_clockwise
+[==========] 2 test(s) run.
+[  PASSED  ] 2 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"9-mars_rover" end time: Jan 04 14:17 CET
+"9-mars_rover" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/17 Testing: 10-tennis
+10/17 Test: 10-tennis
+Command: "/Users/pedro/src/c-kata/build/test_10-tennis"
+Directory: /Users/pedro/src/c-kata/build
+"10-tennis" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 34 test(s).
+[ RUN      ] checkRealisticTennisGame
+[       OK ] checkRealisticTennisGame
+[ RUN      ] Love-All
+[       OK ] Love-All
+[ RUN      ] Fifteen-All
+[       OK ] Fifteen-All
+[ RUN      ] Thirty-All
+[       OK ] Thirty-All
+[ RUN      ] Deuce
+[       OK ] Deuce
+[ RUN      ] Deuce
+[       OK ] Deuce
+[ RUN      ] Fifteen-Love
+[       OK ] Fifteen-Love
+[ RUN      ] Love-Fifteen
+[       OK ] Love-Fifteen
+[ RUN      ] Thirty-Love
+[       OK ] Thirty-Love
+[ RUN      ] Love-Thirty
+[       OK ] Love-Thirty
+[ RUN      ] Forty-Love
+[       OK ] Forty-Love
+[ RUN      ] Love-Forty
+[       OK ] Love-Forty
+[ RUN      ] Win for player1
+[       OK ] Win for player1
+[ RUN      ] Win for player2
+[       OK ] Win for player2
+[ RUN      ] Thirty-Fifteen
+[       OK ] Thirty-Fifteen
+[ RUN      ] Fifteen-Thirty
+[       OK ] Fifteen-Thirty
+[ RUN      ] Forty-Fifteen
+[       OK ] Forty-Fifteen
+[ RUN      ] Fifteen-Forty
+[       OK ] Fifteen-Forty
+[ RUN      ] Win for player1
+[       OK ] Win for player1
+[ RUN      ] Win for player2
+[       OK ] Win for player2
+[ RUN      ] Forty-Thirty
+[       OK ] Forty-Thirty
+[ RUN      ] Thirty-Forty
+[       OK ] Thirty-Forty
+[ RUN      ] Win for player1
+[       OK ] Win for player1
+[ RUN      ] Win for player2
+[       OK ] Win for player2
+[ RUN      ] Advantage player1
+[       OK ] Advantage player1
+[ RUN      ] Advantage player2
+[       OK ] Advantage player2
+[ RUN      ] Advantage player1
+[       OK ] Advantage player1
+[ RUN      ] Advantage player2
+[       OK ] Advantage player2
+[ RUN      ] Advantage player1
+[       OK ] Advantage player1
+[ RUN      ] Advantage player2
+[       OK ] Advantage player2
+[ RUN      ] Win for player1
+[       OK ] Win for player1
+[ RUN      ] Win for player2
+[       OK ] Win for player2
+[ RUN      ] Win for player1
+[       OK ] Win for player1
+[ RUN      ] Win for player2
+[       OK ] Win for player2
+[==========] 34 test(s) run.
+[  PASSED  ] 34 test(s).
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"10-tennis" end time: Jan 04 14:17 CET
+"10-tennis" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/17 Testing: 11-gilded_rose
+11/17 Test: 11-gilded_rose
+Command: "/Users/pedro/src/c-kata/build/test_11-gilded_rose"
+Directory: /Users/pedro/src/c-kata/build
+"11-gilded_rose" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_foo
+[       OK ] test_foo
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"11-gilded_rose" end time: Jan 04 14:17 CET
+"11-gilded_rose" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/17 Testing: 12-raid
+12/17 Test: 12-raid
+Command: "/Users/pedro/src/c-kata/build/test_12-raid"
+Directory: /Users/pedro/src/c-kata/build
+"12-raid" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_kata
+[       OK ] test_kata
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"12-raid" end time: Jan 04 14:17 CET
+"12-raid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/17 Testing: 14-smelly_tic_tac_toe
+13/17 Test: 14-smelly_tic_tac_toe
+Command: "/Users/pedro/src/c-kata/build/test_14-smelly_tic_tac_toe"
+Directory: /Users/pedro/src/c-kata/build
+"14-smelly_tic_tac_toe" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 10 test(s).
+[ RUN      ] test_not_allow_player_o_to_play_first
+Invalid first player
+[       OK ] test_not_allow_player_o_to_play_first
+[ RUN      ] test_not_allow_player_x_to_play_twice_in_a_row
+Invalid next player
+[       OK ] test_not_allow_player_x_to_play_twice_in_a_row
+[ RUN      ] test_not_allow_player_to_play_in_last_played_position
+Invalid position
+[       OK ] test_not_allow_player_to_play_in_last_played_position
+[ RUN      ] test_not_allow_player_to_play_in_any_played_position
+Invalid position
+[       OK ] test_not_allow_player_to_play_in_any_played_position
+[ RUN      ] test_declare_player_x_as_a_winner_if_three_in_top_row
+[       OK ] test_declare_player_x_as_a_winner_if_three_in_top_row
+[ RUN      ] test_declare_player_o_as_a_winner_if_three_in_top_row
+[       OK ] test_declare_player_o_as_a_winner_if_three_in_top_row
+[ RUN      ] test_declare_player_x_as_a_winner_if_three_in_middle_row
+[       OK ] test_declare_player_x_as_a_winner_if_three_in_middle_row
+[ RUN      ] test_declare_player_o_as_a_winner_if_three_in_middle_row
+[       OK ] test_declare_player_o_as_a_winner_if_three_in_middle_row
+[ RUN      ] test_declare_player_x_as_a_winner_if_three_in_bottom_row
+[       OK ] test_declare_player_x_as_a_winner_if_three_in_bottom_row
+[ RUN      ] test_declare_player_o_as_a_winner_if_three_in_bottom_row
+[       OK ] test_declare_player_o_as_a_winner_if_three_in_bottom_row
+[==========] 10 test(s) run.
+[  PASSED  ] 10 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"14-smelly_tic_tac_toe" end time: Jan 04 14:17 CET
+"14-smelly_tic_tac_toe" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/17 Testing: 15-character_copier
+14/17 Test: 15-character_copier
+Command: "/Users/pedro/src/c-kata/build/test_15-character_copier"
+Directory: /Users/pedro/src/c-kata/build
+"15-character_copier" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_copy_list_of_characters
+[       OK ] test_copy_list_of_characters
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"15-character_copier" end time: Jan 04 14:17 CET
+"15-character_copier" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/17 Testing: 16-esa_mars_rover
+15/17 Test: 16-esa_mars_rover
+Command: "/Users/pedro/src/c-kata/build/test_16-esa_mars_rover"
+Directory: /Users/pedro/src/c-kata/build
+"16-esa_mars_rover" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_rover_position
+[       OK ] test_rover_position
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"16-esa_mars_rover" end time: Jan 04 14:17 CET
+"16-esa_mars_rover" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/17 Testing: 17-social_network
+16/17 Test: 17-social_network
+Command: "/Users/pedro/src/c-kata/build/test_17-social_network"
+Directory: /Users/pedro/src/c-kata/build
+"17-social_network" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_use_case_creation
+[       OK ] test_use_case_creation
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"17-social_network" end time: Jan 04 14:17 CET
+"17-social_network" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/17 Testing: 18-london_tic_tac_toe
+17/17 Test: 18-london_tic_tac_toe
+Command: "/Users/pedro/src/c-kata/build/test_18-london_tic_tac_toe"
+Directory: /Users/pedro/src/c-kata/build
+"18-london_tic_tac_toe" start time: Jan 04 14:17 CET
+Output:
+----------------------------------------------------------
+[==========] Running 1 test(s).
+[ RUN      ] test_have_a_winner
+[       OK ] test_have_a_winner
+[==========] 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"18-london_tic_tac_toe" end time: Jan 04 14:17 CET
+"18-london_tic_tac_toe" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 04 14:17 CET

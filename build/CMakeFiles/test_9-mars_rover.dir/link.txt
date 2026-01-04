@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/test_9-mars_rover.dir/src/9-mars_rover/kata.c.o" "CMakeFiles/test_9-mars_rover.dir/src/9-mars_rover/test_kata.c.o" -o test_9-mars_rover  _deps/cmocka-build/src/libcmocka-static.a

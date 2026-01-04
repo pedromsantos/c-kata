@@ -1,0 +1,28 @@
+# Object files
+*.o
+*.obj
+
+# Executables
+test_kata
+*.exe
+*.out
+
+# Compiled static libraries
+*.a
+*.lib
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

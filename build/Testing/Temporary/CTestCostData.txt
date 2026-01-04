@@ -1,0 +1,18 @@
+1-fizz_buzz 2 0.00122429
+2-leap_year 2 0.00116779
+3-fibonacci 2 0.00107673
+4-stack_kata 2 0.00128669
+5-roman_numerals 2 0.00119379
+6-prime_factors 2 0.00112744
+7-tic_tac_toe 2 0.00104938
+8-yahtzee 2 0.00104794
+9-mars_rover 2 0.000981729
+10-tennis 2 0.105606
+11-gilded_rose 2 0.0010794
+12-raid 2 0.000984438
+14-smelly_tic_tac_toe 2 0.00101327
+15-character_copier 2 0.00141088
+16-esa_mars_rover 2 0.00101113
+17-social_network 2 0.00107267
+18-london_tic_tac_toe 2 0.00110006
+---
