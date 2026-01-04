@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 Copier* copier_create(void) {
-    Copier* copier = (Copier*)malloc(sizeof(Copier));
+    Copier* copier = malloc(sizeof(Copier));
     if (copier) {
         copier->data = NULL;
     }
@@ -21,7 +21,7 @@ void copier_copy(Copier* copier) {
 }
 
 Source* source_create(void) {
-    Source* source = (Source*)malloc(sizeof(Source));
+    Source* source = malloc(sizeof(Source));
     if (source) {
         source->data = NULL;
     }
@@ -40,7 +40,7 @@ char source_get_char(Source* source) {
 }
 
 Destination* destination_create(void) {
-    Destination* dest = (Destination*)malloc(sizeof(Destination));
+    Destination* dest = malloc(sizeof(Destination));
     if (dest) {
         dest->data = NULL;
     }

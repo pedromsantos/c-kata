@@ -1,5 +1,4 @@
-#ifndef CHARACTER_COPIER_H
-#define CHARACTER_COPIER_H
+#pragma once
 
 typedef struct {
     void* data;
@@ -24,5 +23,3 @@ char source_get_char(Source* source);
 Destination* destination_create(void);
 void destination_destroy(Destination* destination);
 void destination_set_char(Destination* dest, char c);
-
-#endif /* CHARACTER_COPIER_H */

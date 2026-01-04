@@ -1,5 +1,4 @@
-#ifndef MARS_ROVER_H
-#define MARS_ROVER_H
+#pragma once
 
 typedef struct {
     void* data;
@@ -8,5 +7,3 @@ typedef struct {
 Rover* rover_create(void);
 void rover_destroy(Rover* rover);
 const char* rover_execute(Rover* rover, const char* command);
-
-#endif /* MARS_ROVER_H */

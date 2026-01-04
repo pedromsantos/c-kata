@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 Raid* raid_create(void) {
-    Raid* raid = (Raid*)malloc(sizeof(Raid));
+    Raid* raid = malloc(sizeof(Raid));
     if (raid) {
         raid->data = NULL;
     }
@@ -17,7 +17,7 @@ void raid_destroy(Raid* raid) {
 }
 
 GuildMember* guild_member_create(void) {
-    GuildMember* member = (GuildMember*)malloc(sizeof(GuildMember));
+    GuildMember* member = malloc(sizeof(GuildMember));
     if (member) {
         member->raids = NULL;
         member->raid_count = 0;
@@ -68,7 +68,7 @@ Raid** raid_dao_find_raids_by(GuildMember* member) {
 }
 
 RaidService* raid_service_create(void) {
-    RaidService* service = (RaidService*)malloc(sizeof(RaidService));
+    RaidService* service = malloc(sizeof(RaidService));
     if (service) {
         service->data = NULL;
     }

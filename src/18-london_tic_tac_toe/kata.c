@@ -24,7 +24,7 @@ bool turn_equals(Turn* a, Turn* b) {
 }
 
 TicTacToe* tic_tac_toe_create(void) {
-    TicTacToe* game = (TicTacToe*)malloc(sizeof(TicTacToe));
+    TicTacToe* game = malloc(sizeof(TicTacToe));
     if (game) {
         game->data = NULL;
     }
@@ -43,7 +43,7 @@ void tic_tac_toe_play(TicTacToe* game, Turn turn) {
 }
 
 Output* output_create(void) {
-    Output* output = (Output*)malloc(sizeof(Output));
+    Output* output = malloc(sizeof(Output));
     if (output) {
         output->data = NULL;
     }

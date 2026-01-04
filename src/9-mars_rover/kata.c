@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 Rover* rover_create(void) {
-    Rover* rover = (Rover*)malloc(sizeof(Rover));
+    Rover* rover = malloc(sizeof(Rover));
     if (rover) {
         rover->data = NULL;
     }

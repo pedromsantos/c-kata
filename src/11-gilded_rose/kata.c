@@ -1,6 +1,53 @@
 #include <string.h>
-#include "GildedRose.h"
+#include "kata.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+Item*
+item_create(const char *name, int sellIn, int quality)
+{
+    Item* item = malloc(sizeof(Item));
+    if (item) {
+        init_item(item, name, sellIn, quality);
+    }
+    return item;
+}
+
+void
+item_destroy(Item* item)
+{
+    if (item) {
+        free(item->name);
+        free(item);
+    }
+}
+
+GildedRose*
+gilded_rose_create(Item* items, int size)
+{
+    GildedRose* rose = malloc(sizeof(GildedRose));
+    if (rose) {
+        rose->items = items;
+        rose->size = size;
+    }
+    return rose;
+}
+
+void
+gilded_rose_destroy(GildedRose* rose)
+{
+    if (rose) {
+        free(rose);
+    }
+}
+
+void
+gilded_rose_update_quality(GildedRose* rose)
+{
+    if (rose) {
+        update_quality(rose->items, rose->size);
+    }
+}
 
 Item*
 init_item(Item* item, const char *name, int sellIn, int quality)

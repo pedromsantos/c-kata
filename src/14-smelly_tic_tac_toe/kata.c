@@ -12,7 +12,7 @@ Tile tile_create(int x, int y) {
 }
 
 Board* board_create(void) {
-    Board* board = (Board*)malloc(sizeof(Board));
+    Board* board = malloc(sizeof(Board));
     if (board) {
         int index = 0;
         for (int i = 0; i < 3; i++) {
@@ -47,7 +47,7 @@ void board_add_tile_at(Board* board, char symbol, int x, int y) {
 }
 
 Game* game_create(void) {
-    Game* game = (Game*)malloc(sizeof(Game));
+    Game* game = malloc(sizeof(Game));
     if (game) {
         game->last_symbol = ' ';
         int index = 0;

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 UseCase* use_case_create(void) {
-    UseCase* use_case = (UseCase*)malloc(sizeof(UseCase));
+    UseCase* use_case = malloc(sizeof(UseCase));
     if (use_case) {
         use_case->data = NULL;
     }

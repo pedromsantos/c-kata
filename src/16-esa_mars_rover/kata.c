@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 Rover* rover_create(void) {
-    Rover* rover = (Rover*)malloc(sizeof(Rover));
+    Rover* rover = malloc(sizeof(Rover));
     if (rover) {
         rover->data = NULL;
     }
@@ -20,7 +20,7 @@ void rover_execute(Rover* rover) {
 }
 
 Radio* radio_create(void) {
-    Radio* radio = (Radio*)malloc(sizeof(Radio));
+    Radio* radio = malloc(sizeof(Radio));
     if (radio) {
         radio->data = NULL;
     }

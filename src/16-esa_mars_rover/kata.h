@@ -1,5 +1,4 @@
-#ifndef ESA_MARS_ROVER_H
-#define ESA_MARS_ROVER_H
+#pragma once
 
 #define MARS_ROVER "Mars plateau"
 
@@ -19,5 +18,3 @@ Radio* radio_create(void);
 void radio_destroy(Radio* radio);
 void radio_send(Radio* radio, const char* message);
 const char* radio_receive(Radio* radio);
-
-#endif /* ESA_MARS_ROVER_H */

@@ -1,5 +1,4 @@
-#ifndef LONDON_TIC_TAC_TOE_H
-#define LONDON_TIC_TAC_TOE_H
+#pragma once
 
 #include <stdbool.h>
 
@@ -53,5 +52,3 @@ void output_destroy(Output* output);
 void output_print_play(Output* output, int x, int y, const char* player);
 void output_print_winner(Output* output, const char* player);
 void output_print_error(Output* output, const char* error_message);
-
-#endif /* LONDON_TIC_TAC_TOE_H */

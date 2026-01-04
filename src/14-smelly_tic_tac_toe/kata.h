@@ -1,5 +1,4 @@
-#ifndef SMELLY_TIC_TAC_TOE_H
-#define SMELLY_TIC_TAC_TOE_H
+#pragma once
 
 typedef struct {
     int x;
@@ -28,5 +27,3 @@ Game* game_create(void);
 void game_destroy(Game* game);
 void game_play(Game* game, char symbol, int x, int y);
 char game_determine_winner(Game* game);
-
-#endif /* SMELLY_TIC_TAC_TOE_H */

@@ -1,6 +1,3 @@
-#ifndef FIZZ_BUZZ_H
-#define FIZZ_BUZZ_H
+#pragma once
 
 #define FIZZ_BUZZ ""
-
-#endif /* FIZZ_BUZZ_H */

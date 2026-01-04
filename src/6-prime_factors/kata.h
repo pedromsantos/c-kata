@@ -1,6 +1,3 @@
-#ifndef PRIME_FACTORS_H
-#define PRIME_FACTORS_H
+#pragma once
 
 #define PRIME_FACTORS 1
-
-#endif /* PRIME_FACTORS_H */

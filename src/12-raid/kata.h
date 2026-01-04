@@ -1,5 +1,4 @@
-#ifndef RAID_H
-#define RAID_H
+#pragma once
 
 typedef struct Raid {
     void* data;
@@ -32,5 +31,3 @@ Raid** raid_dao_find_raids_by(GuildMember* member);
 RaidService* raid_service_create(void);
 void raid_service_destroy(RaidService* service);
 Raid** raid_service_get_raids_by_guild_member(RaidService* service, GuildMember* other);
-
-#endif /* RAID_H */
