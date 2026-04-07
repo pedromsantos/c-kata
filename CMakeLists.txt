@@ -34,21 +34,23 @@ FetchContent_MakeAvailable(cmocka)
 set(KATAS
     1-fizz_buzz
     2-leap_year
-    3-fibonacci
-    4-stack_kata
-    5-roman_numerals
-    6-prime_factors
-    7-tic_tac_toe
-    8-yahtzee
-    9-mars_rover
-    10-tennis
-    11-gilded_rose
-    12-raid
-    14-smelly_tic_tac_toe
-    15-character_copier
-    16-esa_mars_rover
-    17-social_network
-    18-london_tic_tac_toe
+    3-stats_calculator
+    4-anagrams
+    5-fibonacci
+    6-stack_kata
+    7-roman_numerals
+    8-prime_factors
+    9-tic_tac_toe
+    10-yahtzee
+    11-mars_rover
+    12-tennis
+    13-gilded_rose
+    14-raid
+    16-smelly_tic_tac_toe
+    17-character_copier
+    18-esa_mars_rover
+    19-social_network
+    20-london_tic_tac_toe
 )
 
 # Build each kata
