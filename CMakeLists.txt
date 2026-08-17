@@ -51,6 +51,11 @@ set(KATAS
     18-esa_mars_rover
     19-social_network
     20-london_tic_tac_toe
+    21-smelly_mars_rover
+    22-smelly_shopping_cart
+    23-shopping_cart
+    24-katacombs
+    26-smelly_yahtzee
 )
 
 # Build each kata
@@ -76,6 +81,30 @@ foreach(KATA ${KATAS})
         add_test(NAME ${KATA} COMMAND test_${KATA})
     endif()
 endforeach()
+
+# 22-smelly_shopping_cart is laid out across Domain/Application/Infrastructure
+# (mirroring the hexagonal ts-kata source), so it needs its own executable
+# instead of the single kata.c/test_kata.c pair the loop above expects.
+set(SMELLY_SHOPPING_CART_DIR ${CMAKE_SOURCE_DIR}/src/22-smelly_shopping_cart)
+
+if(EXISTS ${SMELLY_SHOPPING_CART_DIR}/test_kata.c)
+    add_executable(test_22-smelly_shopping_cart
+        ${SMELLY_SHOPPING_CART_DIR}/Domain/domain.c
+        ${SMELLY_SHOPPING_CART_DIR}/Infrastructure/infrastructure.c
+        ${SMELLY_SHOPPING_CART_DIR}/Application/application.c
+        ${SMELLY_SHOPPING_CART_DIR}/test_kata.c
+    )
+
+    target_include_directories(test_22-smelly_shopping_cart PRIVATE
+        ${SMELLY_SHOPPING_CART_DIR}
+    )
+
+    target_link_libraries(test_22-smelly_shopping_cart
+        cmocka-static
+    )
+
+    add_test(NAME 22-smelly_shopping_cart COMMAND test_22-smelly_shopping_cart)
+endif()
 
 # Custom target to run all tests
 add_custom_target(check

@@ -78,7 +78,7 @@ ctest --output-on-failure
 
 ## Katas
 
-This collection includes 17 coding katas of varying difficulty:
+This collection includes 22 coding katas of varying difficulty:
 
 1. **1-fizz_buzz** - Classic FizzBuzz kata
 2. **2-leap_year** - Leap year calculator
@@ -97,6 +97,11 @@ This collection includes 17 coding katas of varying difficulty:
 15. **16-esa_mars_rover** - ESA Mars Rover kata
 16. **17-social_network** - Social network implementation
 17. **18-london_tic_tac_toe** - London-style TDD Tic Tac Toe
+18. **21-smelly_mars_rover** - Legacy code & test smells fixture kata (Mars Rover)
+19. **22-smelly_shopping_cart** - Legacy code & test smells fixture kata (hexagonal Shopping Cart)
+20. **23-shopping_cart** - DDD/hexagonal Shopping Cart starter scaffold
+21. **24-katacombs** - DDD/hexagonal text-adventure starter scaffold
+22. **26-smelly_yahtzee** - Legacy code & test smells fixture kata (Yahtzee dice)
 
 Each kata directory contains a `README.md` with specific instructions and requirements.
 
