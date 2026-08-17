@@ -18,7 +18,7 @@ set(CMAKE_WARN_DEPRECATED OFF)
 include(FetchContent)
 FetchContent_Declare(
     cmocka
-    GIT_REPOSITORY https://git.cryptomilk.org/projects/cmocka.git
+    GIT_REPOSITORY https://github.com/coreboot/cmocka.git
     GIT_TAG        cmocka-1.1.5
     GIT_SHALLOW    1
     TLS_VERIFY     false
