@@ -39,6 +39,7 @@ cmake-build-*/
 *.hex
 test_kata
 test_*
+!src/**/test_kata.c
 
 # Debug files
 *.dSYM/
