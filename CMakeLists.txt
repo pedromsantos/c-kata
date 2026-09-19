@@ -106,6 +106,60 @@ if(EXISTS ${SMELLY_SHOPPING_CART_DIR}/test_kata.c)
     add_test(NAME 22-smelly_shopping_cart COMMAND test_22-smelly_shopping_cart)
 endif()
 
+# 27-smelly_solid is laid out across Srp/Ocp/Lsp/Isp/Dip subfolders (one per
+# SOLID principle), so it needs its own executable instead of the single
+# kata.c/test_kata.c pair the loop above expects.
+set(SMELLY_SOLID_DIR ${CMAKE_SOURCE_DIR}/src/27-smelly_solid)
+
+if(EXISTS ${SMELLY_SOLID_DIR}/test_kata.c)
+    add_executable(test_27-smelly_solid
+        ${SMELLY_SOLID_DIR}/Srp/car.c
+        ${SMELLY_SOLID_DIR}/Ocp/car_engine_report.c
+        ${SMELLY_SOLID_DIR}/Lsp/oven.c
+        ${SMELLY_SOLID_DIR}/Isp/electric_car.c
+        ${SMELLY_SOLID_DIR}/Dip/kitchen.c
+        ${SMELLY_SOLID_DIR}/test_kata.c
+    )
+
+    target_include_directories(test_27-smelly_solid PRIVATE
+        ${SMELLY_SOLID_DIR}
+    )
+
+    target_link_libraries(test_27-smelly_solid
+        cmocka-static
+    )
+
+    add_test(NAME 27-smelly_solid COMMAND test_27-smelly_solid)
+endif()
+
+# 28-smelly_connascence is laid out as several independent single-concern
+# files (one per connascence form), so it needs its own executable instead
+# of the single kata.c/test_kata.c pair the loop above expects.
+set(SMELLY_CONNASCENCE_DIR ${CMAKE_SOURCE_DIR}/src/28-smelly_connascence)
+
+if(EXISTS ${SMELLY_CONNASCENCE_DIR}/test_kata.c)
+    add_executable(test_28-smelly_connascence
+        ${SMELLY_CONNASCENCE_DIR}/notification_system.c
+        ${SMELLY_CONNASCENCE_DIR}/transport_selector.c
+        ${SMELLY_CONNASCENCE_DIR}/checksum_calculator.c
+        ${SMELLY_CONNASCENCE_DIR}/receipt_sender.c
+        ${SMELLY_CONNASCENCE_DIR}/background_job_runner.c
+        ${SMELLY_CONNASCENCE_DIR}/identity.c
+        ${SMELLY_CONNASCENCE_DIR}/counter_consumer.c
+        ${SMELLY_CONNASCENCE_DIR}/test_kata.c
+    )
+
+    target_include_directories(test_28-smelly_connascence PRIVATE
+        ${SMELLY_CONNASCENCE_DIR}
+    )
+
+    target_link_libraries(test_28-smelly_connascence
+        cmocka-static
+    )
+
+    add_test(NAME 28-smelly_connascence COMMAND test_28-smelly_connascence)
+endif()
+
 # Custom target to run all tests
 add_custom_target(check
     COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
