@@ -46,7 +46,6 @@ set(KATAS
     12-tennis
     13-gilded_rose
     14-raid
-    16-smelly_tic_tac_toe
     17-character_copier
     18-esa_mars_rover
     19-social_network
@@ -81,6 +80,33 @@ foreach(KATA ${KATAS})
         add_test(NAME ${KATA} COMMAND test_${KATA})
     endif()
 endforeach()
+
+# 16-smelly_tic_tac_toe is laid out across board/row_winner_checker/
+# column_winner_checker/diagonal_winner_checker/game files (mirroring the
+# split ts-kata source), so it needs its own executable instead of the
+# single kata.c/test_kata.c pair the loop above expects.
+set(SMELLY_TIC_TAC_TOE_DIR ${CMAKE_SOURCE_DIR}/src/16-smelly_tic_tac_toe)
+
+if(EXISTS ${SMELLY_TIC_TAC_TOE_DIR}/test_kata.c)
+    add_executable(test_16-smelly_tic_tac_toe
+        ${SMELLY_TIC_TAC_TOE_DIR}/board.c
+        ${SMELLY_TIC_TAC_TOE_DIR}/row_winner_checker.c
+        ${SMELLY_TIC_TAC_TOE_DIR}/column_winner_checker.c
+        ${SMELLY_TIC_TAC_TOE_DIR}/diagonal_winner_checker.c
+        ${SMELLY_TIC_TAC_TOE_DIR}/game.c
+        ${SMELLY_TIC_TAC_TOE_DIR}/test_kata.c
+    )
+
+    target_include_directories(test_16-smelly_tic_tac_toe PRIVATE
+        ${SMELLY_TIC_TAC_TOE_DIR}
+    )
+
+    target_link_libraries(test_16-smelly_tic_tac_toe
+        cmocka-static
+    )
+
+    add_test(NAME 16-smelly_tic_tac_toe COMMAND test_16-smelly_tic_tac_toe)
+endif()
 
 # 22-smelly_shopping_cart is laid out across Domain/Application/Infrastructure
 # (mirroring the hexagonal ts-kata source), so it needs its own executable

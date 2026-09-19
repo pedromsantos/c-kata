@@ -4,6 +4,18 @@
 
 This kata contains a deliberately "smelly" implementation of TicTacToe that needs refactoring. Your goal is to identify and fix various code smells while maintaining functionality.
 
+## Layout: a cross-file verification fixture
+
+The implementation is split across `board.h`/`board.c` (the `Tile`/`Board` data types), `row_winner_checker.h`/`.c`, `column_winner_checker.h`/`.c`, and `diagonal_winner_checker.h`/`.c` (one line-checking strategy per file), and `game.h`/`game.c` (`Game`, which wires the three checkers together in `game_determine_winner`). This mirrors the same split done in the TypeScript reference kata (`15_SmellyTicTacToe`), and exists to give static-analysis/AI code-review tooling (specifically [jev-review](https://github.com/pedromsantos/jev-review)) a genuinely multi-file example of cross-file code smells to check its rules against:
+
+- **Duplicated Code**: `row_winner_checker.c`, `column_winner_checker.c`, and `diagonal_winner_checker.c` each re-implement the same "are these three tiles non-empty and equal" pattern independently rather than sharing a helper -- deliberately, not an oversight.
+- **Shotgun Surgery**: adding a fourth line-checking strategy means touching several files (a new checker pair, plus `game.c`'s wiring).
+- **Divergent Change**: `game.c` is the file that changes for multiple unrelated reasons -- move-validation rule changes, or wiring in a new line-checking strategy.
+
+Originally `Winner()`/`game_determine_winner()` only ever checked rows, never columns or diagonals -- a real, pre-existing gap in this kata. The column and diagonal checkers close that gap as part of the split, rather than being purely cosmetic additions.
+
+This kata also now has a real test suite (`test_kata.c`, 14 cmocka tests) for the first time -- previously there was no test file registered in the build at all.
+
 ## Code Smells to Look For
 
 The implementation contains the following code smells:
