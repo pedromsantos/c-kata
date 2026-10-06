@@ -100,7 +100,7 @@ This collection includes 22 coding katas of varying difficulty:
 18. **21-smelly_mars_rover** - Legacy code & test smells fixture kata (Mars Rover)
 19. **22-smelly_shopping_cart** - Legacy code & test smells fixture kata (hexagonal Shopping Cart)
 20. **23-shopping_cart** - DDD/hexagonal Shopping Cart starter scaffold
-21. **24-katacombs** - DDD/hexagonal text-adventure starter scaffold
+21. **24-katacombs** - Multiplayer text-adventure kata (README only)
 22. **26-smelly_yahtzee** - Legacy code & test smells fixture kata (Yahtzee dice)
 
 Each kata directory contains a `README.md` with specific instructions and requirements.

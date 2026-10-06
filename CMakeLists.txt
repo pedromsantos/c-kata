@@ -53,7 +53,6 @@ set(KATAS
     21-smelly_mars_rover
     22-smelly_shopping_cart
     23-shopping_cart
-    24-katacombs
     26-smelly_yahtzee
 )
 
